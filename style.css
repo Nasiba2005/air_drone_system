@@ -1,38 +1,79 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
-    text-align: center;
+    overflow-x: hidden;
 }
 
 .container {
-    padding: 50px;
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: slideDown 1s ease;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #00e6ff;
 }
 
 p {
-    max-width: 700px;
-    margin: 20px auto;
-    line-height: 1.6;
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.7;
+    opacity: 0.9;
 }
 
 .button {
     display: inline-block;
     margin-top: 30px;
-    padding: 12px 25px;
-    background: #00c6ff;
-    color: black;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .button:hover {
-    background: #0072ff;
-    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00c6ff;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-40px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* Карточки */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
 }
