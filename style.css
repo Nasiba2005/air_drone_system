@@ -77,3 +77,24 @@ p {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0,255,255,0.3);
 }
+.flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.flow div {
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.flow div:hover {
+    background: #00c6ff;
+    color: black;
+    transform: scale(1.1);
+}
